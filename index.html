@@ -9,38 +9,45 @@
   <meta http-equiv="Expires" content="0">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lista de Presentes | Casamento</title>
+  <title>Renzo & Maraya | Lista de Presentes</title>
 
-  <!-- Fonte estilo casamento -->
+  <!-- Fontes elegantes -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       background: #f8f6f2;
-      color: #3d3d3d;
-      text-align: center;
+      color: #3b3b3b;
       font-family: 'Inter', sans-serif;
     }
 
     .container {
-      max-width: 420px;
+      max-width: 520px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 60px 24px;
+      text-align: center;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 500;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .date {
       font-size: 14px;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       color: #8a8a8a;
-      margin-bottom: 25px;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 10px;
     }
 
     p {
@@ -51,22 +58,33 @@
 
     .gift-btn {
       width: 100%;
-      padding: 16px;
+      padding: 18px;
       margin-bottom: 14px;
       font-size: 15px;
+      border-radius: 16px;
       border: 1px solid #ddd;
-      border-radius: 14px;
       background: #ffffff;
       cursor: pointer;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
       transition: all 0.2s ease;
     }
 
     .gift-btn:hover {
-      background: #f0ede7;
+      background: #f1eee8;
+    }
+
+    .gift-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 400;
+    }
+
+    .gift-value {
+      font-weight: 500;
+      color: #555;
     }
 
     .custom {
@@ -75,9 +93,9 @@
 
     input {
       width: 100%;
-      padding: 14px;
+      padding: 16px;
       font-size: 15px;
-      border-radius: 12px;
+      border-radius: 14px;
       border: 1px solid #ccc;
       margin-bottom: 12px;
       text-align: center;
@@ -85,7 +103,7 @@
     }
 
     footer {
-      margin-top: 45px;
+      margin-top: 60px;
       font-size: 13px;
       color: #9a9a9a;
       font-family: 'Playfair Display', serif;
@@ -99,32 +117,39 @@
     <h1>Renzo Gomes & Maraya Pereira</h1>
     <div class="date">20 • JUNHO • 2026</div>
 
-    <p>Com carinho, você pode nos presentear via Pix 💍</p>
+    <h2>Lista de Presentes</h2>
+    <p>Se desejar nos presentear, escolhe uma das opções abaixo 💍</p>
 
     <button class="gift-btn" onclick="pagar(200)">
-      ☕ Café Irlandês • R$ 200
+      <div class="gift-name">☕ Café Irlandês</div>
+      <div class="gift-value">R$ 200</div>
     </button>
 
     <button class="gift-btn" onclick="pagar(400)">
-      🌙 Noite Especial • R$ 400
+      <div class="gift-name">🌙 Noite Especial</div>
+      <div class="gift-value">R$ 400</div>
     </button>
 
     <button class="gift-btn" onclick="pagar(600)">
-      📘 Curso de Inglês • R$ 600
+      <div class="gift-name">📘 Curso de Inglês</div>
+      <div class="gift-value">R$ 600</div>
     </button>
 
     <button class="gift-btn" onclick="pagar(800)">
-      🏡 Projeto Casa • R$ 800
+      <div class="gift-name">🏡 Projeto Casa</div>
+      <div class="gift-value">R$ 800</div>
     </button>
 
     <button class="gift-btn" onclick="pagar(1000)">
-      💍 Sonho do Casal • R$ 1.000
+      <div class="gift-name">💍 Sonho do Casal</div>
+      <div class="gift-value">R$ 1.000</div>
     </button>
 
     <div class="custom">
       <input type="number" id="valorCustom" placeholder="Valor personalizado (mín. R$ 200)">
       <button class="gift-btn" onclick="pagarPersonalizado()">
-        ✨ Valor personalizado
+        <div class="gift-name">✨ Valor personalizado</div>
+        <div class="gift-value">Pix</div>
       </button>
     </div>
 
@@ -134,7 +159,7 @@
   </div>
 
   <script>
-    const PIX_BASE = "SEU_PIX_AQUI"; // Pix Copia e Cola ou link do banco
+    const PIX_BASE = "SEU_PIX_AQUI"; // Pix Copia e Cola Nubank
 
     function pagar(valor) {
       window.location.href = PIX_BASE;
